@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTA VI — Vice City Returns | Official Fan Experience</title>
+  <meta name="description" content="Experience the world of GTA VI. Explore Vice City, meet the characters, and feel the thrill of the most anticipated game of the decade." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="rockstar-logo">
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+          <rect width="120" height="120" fill="#e8c94d"/>
+          <text x="60" y="75" text-anchor="middle" font-size="52" font-weight="bold" fill="#1a1a1a" font-family="serif">R*</text>
+        </svg>
+      </div>
+      <div class="loading-bar-wrapper">
+        <div class="loading-bar" id="loadingBar"></div>
+      </div>
+      <p class="loading-text" id="loadingText">LOADING VICE CITY...</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="nav-gta">GTA</span><span class="nav-vi">VI</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" id="nav-home">HOME</a></li>
+      <li><a href="#story" id="nav-story">STORY</a></li>
+      <li><a href="#characters" id="nav-characters">CHARACTERS</a></li>
+      <li><a href="#world" id="nav-world">WORLD</a></li>
+      <li><a href="#game-section" id="nav-play">PLAY</a></li>
+      <li><a href="#gallery" id="nav-gallery">GALLERY</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('game-section').scrollIntoView({behavior:'smooth'})">PLAY NOW</button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-bg">
+      <img src="hero_bg.png" alt="Vice City Night Skyline" class="hero-bg-img" id="heroBgImg" />
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">ROCKSTAR GAMES PRESENTS</div>
+      <div class="hero-logo-wrap">
+        <h1 class="hero-title">
+          <span class="hero-gta">GTA</span>
+          <span class="hero-vi">VI</span>
+        </h1>
+        <div class="hero-subtitle-line"></div>
+        <p class="hero-subtitle">VICE CITY</p>
+      </div>
+      <p class="hero-tagline">THE WORLD IS YOURS. TAKE IT.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" id="heroPlayBtn" onclick="document.getElementById('game-section').scrollIntoView({behavior:'smooth'})">
+          <span>▶ PLAY EXPERIENCE</span>
+        </button>
+        <button class="btn-secondary" id="heroTrailerBtn" onclick="playTrailer()">
+          <span>◉ WATCH TRAILER</span>
+        </button>
+      </div>
+      <div class="hero-scroll-hint">
+        <div class="scroll-arrow"></div>
+        <span>SCROLL TO EXPLORE</span>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num" data-target="100">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">MISSIONS</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="400">0</span><span class="stat-unit">KM²</span>
+        <span class="stat-label">OPEN WORLD</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="2">0</span><span class="stat-unit"></span>
+        <span class="stat-label">PROTAGONISTS</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="1000">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">VEHICLES</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAILER MODAL -->
+  <div id="trailerModal" class="modal-overlay" onclick="closeTrailer()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeTrailer()">✕</button>
+      <div class="trailer-placeholder">
+        <div class="trailer-play-icon">▶</div>
+        <p>GTA VI — OFFICIAL TRAILER</p>
+        <p class="trailer-sub">Coming 2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY SECTION -->
+  <section id="story">
+    <div class="section-header">
+      <div class="section-tag">THE STORY</div>
+      <h2 class="section-title">TWO LIVES.<br/>ONE CITY.</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="story-grid">
+      <div class="story-text">
+        <p class="story-para">
+          Set in the sun-soaked, neon-lit streets of <strong>Vice City</strong> — a sprawling fictional recreation of Miami — GTA VI pulls you into a world of crime, loyalty, and survival.
+        </p>
+        <p class="story-para">
+          Play as <strong>Lucia</strong>, a woman desperate to escape her past, and <strong>Jason</strong>, her volatile partner in crime. Together, they navigate the explosive underworld of Leonida, where every decision echoes through the streets.
+        </p>
+        <p class="story-para">
+          From sun-bleached beaches to shadowy back alleys, the world of GTA VI is alive — and it's waiting for you.
+        </p>
+        <div class="story-tags">
+          <span class="tag">OPEN WORLD</span>
+          <span class="tag">DUAL PROTAGONISTS</span>
+          <span class="tag">VICE CITY</span>
+          <span class="tag">ONLINE MULTIPLAYER</span>
+        </div>
+      </div>
+      <div class="story-visual">
+        <div class="story-card">
+          <img src="city.png" alt="Vice City" class="story-city-img" />
+          <div class="story-card-overlay">
+            <span class="story-card-label">VICE CITY, LEONIDA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARACTERS SECTION -->
+  <section id="characters">
+    <div class="section-header">
+      <div class="section-tag">MEET THE CREW</div>
+      <h2 class="section-title">CHARACTERS</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="characters-grid">
+      <div class="char-card" id="charLucia">
+        <div class="char-img-wrap">
+          <img src="character.png" alt="Lucia" class="char-img" />
+          <div class="char-neon-border"></div>
+        </div>
+        <div class="char-info">
+          <h3 class="char-name">LUCIA</h3>
+          <div class="char-role">PROTAGONIST</div>
+          <p class="char-desc">A fierce, determined woman fighting to break free from a life of crime. Her strength is her greatest weapon — and her greatest burden.</p>
+          <div class="char-stats-bar">
+            <div class="char-stat"><span>STRENGTH</span><div class="bar"><div class="bar-fill" style="--w:85%"></div></div></div>
+            <div class="char-stat"><span>STEALTH</span><div class="bar"><div class="bar-fill" style="--w:70%"></div></div></div>
+            <div class="char-stat"><span>DRIVING</span><div class="bar"><div class="bar-fill" style="--w:90%"></div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="char-card" id="charJason">
+        <div class="char-img-wrap char-male">
+          <div class="char-silhouette">
+            <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="jasonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#00d4ff"/>
+                  <stop offset="100%" style="stop-color:#0066ff"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="100" cy="60" rx="35" ry="40" fill="url(#jasonGrad)" opacity="0.8"/>
+              <path d="M40 300 Q60 160 100 140 Q140 160 160 300Z" fill="url(#jasonGrad)" opacity="0.8"/>
+              <rect x="30" y="150" width="25" height="90" rx="12" fill="url(#jasonGrad)" opacity="0.7"/>
+              <rect x="145" y="150" width="25" height="90" rx="12" fill="url(#jasonGrad)" opacity="0.7"/>
+            </svg>
+          </div>
+          <div class="char-neon-border cyan"></div>
+        </div>
+        <div class="char-info">
+          <h3 class="char-name cyan-text">JASON</h3>
+          <div class="char-role cyan-role">CO-PROTAGONIST</div>
+          <p class="char-desc">Volatile, unpredictable, and fiercely loyal. Jason is a man who lives by his own code — even when the world refuses to understand it.</p>
+          <div class="char-stats-bar">
+            <div class="char-stat"><span>STRENGTH</span><div class="bar"><div class="bar-fill cyan-bar" style="--w:95%"></div></div></div>
+            <div class="char-stat"><span>STEALTH</span><div class="bar"><div class="bar-fill cyan-bar" style="--w:55%"></div></div></div>
+            <div class="char-stat"><span>DRIVING</span><div class="bar"><div class="bar-fill cyan-bar" style="--w:80%"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLD SECTION -->
+  <section id="world">
+    <div class="section-header">
+      <div class="section-tag">EXPLORE</div>
+      <h2 class="section-title">THE WORLD OF<br/>VICE CITY</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="world-features">
+      <div class="world-feat" id="feat1">
+        <div class="feat-icon">🌴</div>
+        <h3 class="feat-title">TROPICAL PARADISE</h3>
+        <p class="feat-desc">Miles of sun-drenched beaches, luxury yachts, and swaying palms. Vice City has never looked this good.</p>
+      </div>
+      <div class="world-feat" id="feat2">
+        <div class="feat-icon">🌆</div>
+        <h3 class="feat-title">LIVING CITY</h3>
+        <p class="feat-desc">A city that breathes — with dynamic weather, real routines, and a population that reacts to everything you do.</p>
+      </div>
+      <div class="world-feat" id="feat3">
+        <div class="feat-icon">🚗</div>
+        <h3 class="feat-title">1000+ VEHICLES</h3>
+        <p class="feat-desc">From supercharged muscle cars to sleek speedboats and private jets. The streets — and skies — are yours.</p>
+      </div>
+      <div class="world-feat" id="feat4">
+        <div class="feat-icon">🌙</div>
+        <h3 class="feat-title">NEON NIGHTLIFE</h3>
+        <p class="feat-desc">When the sun goes down, Vice City ignites. Nightclubs, underground fights, and illicit deals after dark.</p>
+      </div>
+      <div class="world-feat" id="feat5">
+        <div class="feat-icon">🎰</div>
+        <h3 class="feat-title">ENDLESS ACTIVITIES</h3>
+        <p class="feat-desc">Heists, races, gambling, surfing, and hundreds of hidden side missions across the entire state of Leonida.</p>
+      </div>
+      <div class="world-feat" id="feat6">
+        <div class="feat-icon">🔫</div>
+        <h3 class="feat-title">EVOLVED COMBAT</h3>
+        <p class="feat-desc">Fluid, realistic gunplay with next-gen physics, destructible environments, and tactical combat options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINI GAME SECTION -->
+  <section id="game-section">
+    <div class="section-header">
+      <div class="section-tag">INTERACTIVE</div>
+      <h2 class="section-title">PLAY THE HEIST</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Drive through Vice City, dodge the cops, and collect the cash!</p>
+    </div>
+    <div class="game-container">
+      <div class="game-hud">
+        <div class="hud-item">
+          <span class="hud-label">SCORE</span>
+          <span class="hud-value" id="score">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">LEVEL</span>
+          <span class="hud-value" id="level">1</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">LIVES</span>
+          <span class="hud-value" id="lives">❤️❤️❤️</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">WANTED</span>
+          <div class="wanted-stars" id="wantedStars">
+            <span class="star empty">★</span>
+            <span class="star empty">★</span>
+            <span class="star empty">★</span>
+            <span class="star empty">★</span>
+            <span class="star empty">★</span>
+          </div>
+        </div>
+      </div>
+      <canvas id="gameCanvas"></canvas>
+      <div class="game-overlay" id="gameOverlay">
+        <div class="game-overlay-content">
+          <div class="game-overlay-logo">GTA VI</div>
+          <h3 id="overlayTitle">THE HEIST</h3>
+          <p id="overlayMsg">Drive your car through Vice City. Collect 💰 cash bags and dodge 🚔 police cruisers!</p>
+          <div class="game-controls-hint">
+            <div class="control-key">←→ or A/D</div><span>Steer</span>
+            <div class="control-key">↑ or W</div><span>Accelerate</span>
+            <div class="control-key">↓ or S</div><span>Brake</span>
+          </div>
+          <button class="btn-primary" id="startGameBtn" onclick="startGame()">START THE HEIST</button>
+        </div>
+      </div>
+    </div>
+    <div class="game-mobile-controls">
+      <button class="mob-btn" id="mobLeft" ontouchstart="mobileKeys.left=true" ontouchend="mobileKeys.left=false">◀</button>
+      <div class="mob-vert">
+        <button class="mob-btn" id="mobUp" ontouchstart="mobileKeys.up=true" ontouchend="mobileKeys.up=false">▲</button>
+        <button class="mob-btn" id="mobDown" ontouchstart="mobileKeys.down=true" ontouchend="mobileKeys.down=false">▼</button>
+      </div>
+      <button class="mob-btn" id="mobRight" ontouchstart="mobileKeys.right=true" ontouchend="mobileKeys.right=false">▶</button>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-header">
+      <div class="section-tag">SCREENSHOTS</div>
+      <h2 class="section-title">GALLERY</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item gal-large" id="gal1">
+        <img src="hero_bg.png" alt="Vice City Night" />
+        <div class="gallery-caption">VICE CITY NIGHTS</div>
+      </div>
+      <div class="gallery-item" id="gal2">
+        <img src="city.png" alt="City Aerial" />
+        <div class="gallery-caption">CITY AERIAL VIEW</div>
+      </div>
+      <div class="gallery-item" id="gal3">
+        <img src="character.png" alt="Lucia" />
+        <div class="gallery-caption">LUCIA — PROTAGONIST</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORMS -->
+  <section id="platforms">
+    <div class="section-header">
+      <div class="section-tag">AVAILABLE ON</div>
+      <h2 class="section-title">GET THE GAME</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="platform-cards">
+      <div class="platform-card" id="ps5Card">
+        <div class="platform-icon">
+          <svg viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="60">
+            <text x="0" y="40" font-size="38" fill="white" font-weight="bold" font-family="sans-serif">PS5</text>
+          </svg>
+        </div>
+        <div class="platform-name">PlayStation 5</div>
+        <div class="platform-date">2025</div>
+        <button class="platform-btn" id="ps5Btn">PRE-ORDER</button>
+      </div>
+      <div class="platform-card featured" id="xboxCard">
+        <div class="platform-badge">FEATURED</div>
+        <div class="platform-icon">
+          <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="80">
+            <text x="0" y="40" font-size="30" fill="white" font-weight="bold" font-family="sans-serif">XBOX</text>
+          </svg>
+        </div>
+        <div class="platform-name">Xbox Series X|S</div>
+        <div class="platform-date">2025</div>
+        <button class="platform-btn" id="xboxBtn">PRE-ORDER</button>
+      </div>
+      <div class="platform-card" id="pcCard">
+        <div class="platform-icon">
+          <svg viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="60">
+            <rect x="5" y="5" width="50" height="35" rx="3" stroke="white" stroke-width="3" fill="none"/>
+            <line x1="30" y1="40" x2="30" y2="48" stroke="white" stroke-width="3"/>
+            <line x1="15" y1="48" x2="45" y2="48" stroke="white" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="platform-name">PC (Steam)</div>
+        <div class="platform-date">TBA</div>
+        <button class="platform-btn" id="pcBtn">WISHLIST</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <span class="nav-gta">GTA</span><span class="nav-vi">VI</span>
+      </div>
+      <p class="footer-tagline">THE WORLD IS YOURS. TAKE IT.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn" id="twitterBtn">𝕏 TWITTER</a>
+        <a href="#" class="social-btn" id="instaBtn">📷 INSTAGRAM</a>
+        <a href="#" class="social-btn" id="ytBtn">▶ YOUTUBE</a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>© 2025 Rockstar Games, Inc. Grand Theft Auto VI is a work of fiction. Fan Experience — Not an official Rockstar Games product.</p>
+      <p class="footer-rating">RATING: M (MATURE 17+)</p>
+    </div>
+  </footer>
+
+  <script src="game.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
