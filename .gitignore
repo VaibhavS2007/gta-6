@@ -1,0 +1,4 @@
+commit_msg.txt
+*.log
+Thumbs.db
+.DS_Store
