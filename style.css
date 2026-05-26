@@ -489,14 +489,12 @@ section {
 .char-silhouette svg { height: 100%; width: auto; filter: drop-shadow(0 0 20px rgba(0,212,255,0.6)); }
 .char-neon-border {
   position: absolute; inset: 0;
-  border: 2px solid transparent;
-  background: linear-gradient(var(--dark2), var(--dark2)) padding-box,
-              linear-gradient(135deg, var(--pink), transparent) border-box;
+  border: 2px solid;
+  border-image: linear-gradient(135deg, var(--pink), transparent) 1;
   pointer-events: none;
 }
 .char-neon-border.cyan {
-  background: linear-gradient(var(--dark2), var(--dark2)) padding-box,
-              linear-gradient(135deg, var(--cyan), transparent) border-box;
+  border-image: linear-gradient(135deg, var(--cyan), transparent) 1;
 }
 
 .char-info { padding: 28px; flex: 1; }
